@@ -1,4 +1,4 @@
-# Challenge Backend Leafnoise
+# Challenge Backend
 
 ## Descripción del Proyecto
 Este proyecto es una API RESTful desarrollada con Flask que permite gestionar empleados en una base de datos MongoDB Atlas. La API incluye funcionalidades para crear, leer, actualizar y eliminar empleados, así como generar reportes en formato Excel. Además, cuenta con autenticación mediante JWT.
