@@ -6,7 +6,7 @@ Este proyecto es una API RESTful desarrollada con Flask que permite gestionar em
 ## Configuración del Proyecto
 1. Clonar este repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone git@github.com:AgustinCastino/challenge-backend.git
    ```
 2. Navegar al directorio del proyecto:
    ```bash
