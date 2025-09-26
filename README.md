@@ -4,19 +4,19 @@
 Este proyecto es una API RESTful desarrollada con Flask que permite gestionar empleados en una base de datos MongoDB Atlas. La API incluye funcionalidades para crear, leer, actualizar y eliminar empleados, así como generar reportes en formato Excel. Además, cuenta con autenticación mediante JWT.
 
 ## Configuración del Proyecto
-1. Clona este repositorio:
+1. Clonar este repositorio:
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    ```
-2. Navega al directorio del proyecto:
+2. Navegar al directorio del proyecto:
    ```bash
    cd challenge-backend
    ```
-3. Crea un entorno virtual:
+3. Crear un entorno virtual:
    ```bash
    python3 -m venv env
    ```
-4. Activa el entorno virtual:
+4. Activar el entorno virtual:
    - En macOS/Linux:
      ```bash
      source env/bin/activate
@@ -25,16 +25,16 @@ Este proyecto es una API RESTful desarrollada con Flask que permite gestionar em
      ```bash
      .\env\Scripts\activate
      ```
-5. Instala las dependencias:
+5. Instalar las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
-6. Configura las variables de entorno en un archivo `.env`:
+6. Configurar las variables de entorno en un archivo. Se utilizó Mongo Atlas por lo que recomiendo crear un cluster y hacer la conexión con el driver de Python `.env`:
    ```env
    MONGO_URI=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<base_de_datos>
    SECRET_KEY=
    ```
-7. Inicia la aplicación:
+7. Iniciar la aplicación:
    ```bash
    python src/main.py
    ```
