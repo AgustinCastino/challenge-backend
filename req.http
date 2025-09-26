@@ -1,0 +1,61 @@
+### Simulación de Autenticación de usuario con JWT. Está hardcodeado para {user:admin, password:123}
+POST http://localhost:5000/login
+Content-Type: application/json
+{
+    "username": "admin",
+    "password": "123"
+}
+
+### Crear un empleado. Es el único endpoint que requiere autenticación.
+POST http://localhost:5000/users
+Content-Type: application/json
+Authorization: Bearer <token_obtenido>
+
+{
+    "nombre": "Lionel",
+    "apellido": "Messi",
+    "email": "leo@example.com",
+    "puesto": "developer",
+    "salario": 10000,
+    "fecha_ingreso": "2025-01-01"
+}
+
+### Los siguientes endpoints no requieren autenticación
+
+### Obtener todos los empleados
+GET http://localhost:5000/users
+
+### Obtener empleados por puesto
+GET http://localhost:5000/users?puesto=developer
+
+### Obtener empleados con paginación
+GET http://localhost:5000/users?page=1&limit=2
+
+### Obtener todos los empleados por puesto con paginación
+GET http://localhost:5000/users?puesto=developer&page=1&limit=2
+
+### Obtener empleado por ID
+GET http://localhost:5000/users/68d698ac334cafa8ce696356
+
+### Actualizar un empleado por ID
+PUT http://localhost:5000/users/<id_empleado>
+Content-Type: application/json
+
+{
+    "nombre": "Nombre Actualizado",
+    "apellido": "Apellido actualizado",
+    "email": "nombre1@example.com",
+    "puesto": "developer",
+    "salario": 50000,
+    "fecha_ingreso": "2023-01-01"
+}
+
+### Eliminar un empleado por ID
+DELETE http://localhost:5000/users/68d697278f4f388811faca26
+
+### Generar reporte de empleados
+GET http://localhost:5000/report
+
+
+
+
